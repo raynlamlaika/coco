@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiEdit, FiTrash2, FiShield, FiSlash, FiCheckCircle, FiUsers } from 'react-icons/fi';
+import { FiEdit, FiTrash2, FiShield, FiSlash, FiCheckCircle } from 'react-icons/fi';
 import type { User } from '../../types';
 import { formatDate, getInitials } from '../../utils/helpers';
 import Button from '../common/Button';
