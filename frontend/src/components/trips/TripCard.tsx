@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiMapPin, FiClock, FiUsers, FiStar } from 'react-icons/fi';
-import { Trip } from '../../types';
+import type { Trip } from '../../types';
 import { formatDate, formatTime, getStatusColor } from '../../utils/helpers';
 import Card from '../common/Card';
 import Button from '../common/Button';

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FiRefreshCw } from 'react-icons/fi';
 import { getTrips, deleteTrip } from '../../services/tripService';
-import { Trip, PaginatedResponse } from '../../types';
+import type { Trip, PaginatedResponse } from '../../types';
 import TripTable from '../../components/admin/TripTable';
 import Button from '../../components/common/Button';
 

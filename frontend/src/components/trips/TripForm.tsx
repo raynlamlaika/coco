@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FiMapPin, FiClock, FiUsers, FiInfo } from 'react-icons/fi';
-import { Match, CreateTripData } from '../../types';
+import type { Match, CreateTripData } from '../../types';
 import { getUpcomingMatches } from '../../services/matchService';
 import Button from '../common/Button';
 import Input from '../common/Input';

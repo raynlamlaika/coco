@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trip } from '../../types';
+import type { Trip } from '../../types';
 import TripCard from './TripCard';
 
 interface TripListProps {

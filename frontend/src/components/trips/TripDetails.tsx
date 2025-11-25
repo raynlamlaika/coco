@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiMapPin, FiClock, FiUsers, FiCheck, FiX, FiMessageCircle } from 'react-icons/fi';
-import { Trip, User } from '../../types';
+import type { Trip, User } from '../../types';
 import { formatDate, formatTime, getStatusColor, getInitials } from '../../utils/helpers';
 import Card from '../common/Card';
 import Button from '../common/Button';

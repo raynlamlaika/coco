@@ -1,5 +1,5 @@
 import api from './api';
-import { ApiResponse, Trip, CreateTripData, PaginatedResponse, TripRecommendation, TripStats } from '../types';
+import type { ApiResponse, Trip, CreateTripData, UpdateTripData, PaginatedResponse, TripRecommendation, TripStats } from '../types';
 
 interface TripFilters {
   match?: string;
@@ -49,7 +49,7 @@ export const createTrip = async (data: CreateTripData): Promise<Trip> => {
 /**
  * Update a trip
  */
-export const updateTrip = async (id: string, data: Partial<CreateTripData>): Promise<Trip> => {
+export const updateTrip = async (id: string, data: UpdateTripData): Promise<Trip> => {
   const response = await api.put<ApiResponse<{ trip: Trip }>>(`/trips/${id}`, data);
   return response.data.data!.trip;
 };

@@ -1,5 +1,5 @@
 import api from './api';
-import { ApiResponse, Match, PaginatedResponse, MatchStats } from '../types';
+import type { ApiResponse, Match, PaginatedResponse, MatchStats } from '../types';
 
 interface MatchFilters {
   homeTeam?: string;

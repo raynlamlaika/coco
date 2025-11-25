@@ -1,5 +1,5 @@
 import React from 'react';
-import { Match } from '../../types';
+import type { Match } from '../../types';
 import MatchCard from './MatchCard';
 
 interface MatchListProps {

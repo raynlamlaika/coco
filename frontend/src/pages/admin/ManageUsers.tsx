@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FiSearch, FiRefreshCw } from 'react-icons/fi';
 import { getUsers, toggleBan, promoteToAdmin, deleteUser } from '../../services/userService';
-import { User, PaginatedResponse } from '../../types';
+import type { User, PaginatedResponse } from '../../types';
 import UserTable from '../../components/admin/UserTable';
 import Input from '../../components/common/Input';
 import Button from '../../components/common/Button';

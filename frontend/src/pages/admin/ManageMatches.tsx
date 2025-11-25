@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FiPlus, FiRefreshCw } from 'react-icons/fi';
 import { getMatches, createMatch, deleteMatch } from '../../services/matchService';
-import { Match, PaginatedResponse } from '../../types';
+import type { Match, PaginatedResponse } from '../../types';
 import MatchTable from '../../components/admin/MatchTable';
 import Button from '../../components/common/Button';
 import Modal from '../../components/common/Modal';

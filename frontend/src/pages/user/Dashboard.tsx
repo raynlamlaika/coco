@@ -4,7 +4,7 @@ import { FiMap, FiPlus, FiCalendar, FiUsers } from 'react-icons/fi';
 import { useAuth } from '../../context/AuthContext';
 import { getMyTrips } from '../../services/tripService';
 import { getUpcomingMatches } from '../../services/matchService';
-import { Trip, Match } from '../../types';
+import type { Trip, Match } from '../../types';
 import Card from '../../components/common/Card';
 import Button from '../../components/common/Button';
 import TripCard from '../../components/trips/TripCard';

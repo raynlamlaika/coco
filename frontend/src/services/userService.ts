@@ -1,5 +1,5 @@
 import api from './api';
-import { ApiResponse, User, PaginatedResponse, UserStats } from '../types';
+import type { ApiResponse, User, PaginatedResponse, UserStats } from '../types';
 
 interface UserFilters {
   search?: string;

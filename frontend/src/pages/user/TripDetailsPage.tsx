@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { getTripById, requestToJoin, confirmRequest, rejectRequest, updateTrip, getTripRecommendations } from '../../services/tripService';
-import { Trip, TripRecommendation } from '../../types';
+import type { Trip, TripRecommendation } from '../../types';
 import TripDetails from '../../components/trips/TripDetails';
 import GroupSuggestions from '../../components/trips/GroupSuggestions';
 import Button from '../../components/common/Button';

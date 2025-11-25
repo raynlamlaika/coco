@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CreateTripData } from '../../types';
+import type { CreateTripData } from '../../types';
 import { createTrip } from '../../services/tripService';
 import TripForm from '../../components/trips/TripForm';
 import Card from '../../components/common/Card';

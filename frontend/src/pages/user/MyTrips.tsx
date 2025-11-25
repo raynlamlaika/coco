@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiPlus } from 'react-icons/fi';
 import { useAuth } from '../../context/AuthContext';
 import { getMyTrips, confirmRequest, rejectRequest } from '../../services/tripService';
-import { Trip } from '../../types';
+import type { Trip } from '../../types';
 import TripCard from '../../components/trips/TripCard';
 import Button from '../../components/common/Button';
 import Card from '../../components/common/Card';

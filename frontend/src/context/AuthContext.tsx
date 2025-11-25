@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { User, LoginData, RegisterData } from '../types';
+import React, { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
+import type { User, LoginData, RegisterData } from '../types';
 import * as authService from '../services/authService';
 import { storage } from '../utils/helpers';
 

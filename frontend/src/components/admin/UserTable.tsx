@@ -1,6 +1,6 @@
 import React from 'react';
-import { FiEdit, FiTrash2, FiShield, FiBan, FiCheckCircle } from 'react-icons/fi';
-import { User } from '../../types';
+import { FiEdit, FiTrash2, FiShield, FiSlash, FiCheckCircle, FiUsers } from 'react-icons/fi';
+import type { User } from '../../types';
 import { formatDate, getInitials } from '../../utils/helpers';
 import Button from '../common/Button';
 
@@ -156,7 +156,7 @@ const UserTable: React.FC<UserTableProps> = ({
                       {user.isBanned ? (
                         <FiCheckCircle className="w-4 h-4 text-green-500" />
                       ) : (
-                        <FiBan className="w-4 h-4 text-orange-500" />
+                        <FiSlash className="w-4 h-4 text-orange-500" />
                       )}
                     </Button>
                     <Button

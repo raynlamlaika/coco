@@ -1,5 +1,5 @@
 import api from './api';
-import { ApiResponse, AuthResponse, LoginData, RegisterData, User } from '../types';
+import type { ApiResponse, AuthResponse, LoginData, RegisterData, User } from '../types';
 
 /**
  * Register a new user

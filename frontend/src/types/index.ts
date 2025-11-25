@@ -171,6 +171,13 @@ export interface CreateTripData {
 }
 
 /**
+ * Trip update data
+ */
+export interface UpdateTripData extends Partial<CreateTripData> {
+  status?: 'pending' | 'confirmed' | 'completed' | 'cancelled';
+}
+
+/**
  * Trip recommendation type
  */
 export interface TripRecommendation {

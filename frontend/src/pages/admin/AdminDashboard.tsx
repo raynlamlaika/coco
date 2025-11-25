@@ -4,7 +4,7 @@ import { FiUsers, FiMap, FiCalendar } from 'react-icons/fi';
 import { getUserStats } from '../../services/userService';
 import { getTripStats } from '../../services/tripService';
 import { getMatchStats } from '../../services/matchService';
-import { UserStats, TripStats, MatchStats } from '../../types';
+import type { UserStats, TripStats, MatchStats } from '../../types';
 import StatsCards from '../../components/admin/StatsCards';
 import Card from '../../components/common/Card';
 import Button from '../../components/common/Button';

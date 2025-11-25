@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiEye, FiTrash2 } from 'react-icons/fi';
-import { Trip } from '../../types';
+import type { Trip } from '../../types';
 import { formatDate, formatTime, getStatusColor, getInitials } from '../../utils/helpers';
 import Button from '../common/Button';
 

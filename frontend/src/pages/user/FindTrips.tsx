@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FiFilter, FiSearch } from 'react-icons/fi';
-import { Trip, Match } from '../../types';
+import type { Trip, Match } from '../../types';
 import { getTrips, requestToJoin } from '../../services/tripService';
 import { getUpcomingMatches } from '../../services/matchService';
 import TripList from '../../components/trips/TripList';

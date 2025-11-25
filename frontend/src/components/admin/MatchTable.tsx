@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiEdit, FiTrash2 } from 'react-icons/fi';
-import { Match } from '../../types';
+import type { Match } from '../../types';
 import { formatDate, formatTime } from '../../utils/helpers';
 import Button from '../common/Button';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiStar, FiCheck } from 'react-icons/fi';
-import { TripRecommendation } from '../../types';
+import type { TripRecommendation } from '../../types';
 import Card from '../common/Card';
 import Button from '../common/Button';
 
