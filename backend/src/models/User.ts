@@ -1,5 +1,5 @@
 import mongoose, { Document, Model, Schema } from 'mongoose';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 
 // IUser interface defining the user model fields
 export interface IUser extends Document {
@@ -18,6 +18,7 @@ export interface IUser extends Document {
   profilePicture: string;
   role: string;
   isBanned: boolean;
+  comparePassword(candidatePassword: string): Promise<boolean>;
 }
 
 // User schema defining the structure of the user document
