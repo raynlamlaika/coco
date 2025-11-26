@@ -103,7 +103,7 @@ const seedDatabase = async (): Promise<void> => {
         fullName: `Admin User ${i}`,
         email: `admin${i}@example.com`,
         phone: generatePhone(),
-        password: await bcrypt.hash('admin123', 10),
+        password: await bcrypt.hash('password123', 10),
         city: getRandomItem(cities),
         region: getRandomItem(regions),
         favouriteTeam: getRandomItem(teams),
@@ -124,13 +124,36 @@ const seedDatabase = async (): Promise<void> => {
     // Create regular users (20)
     console.log('👥 Creating regular users...');
     const regularUsers = [];
+    
+    // Create demo user first
+    const demoUser = new User({
+      fullName: 'John Doe',
+      email: 'john.doe@example.com',
+      phone: generatePhone(),
+      password: await bcrypt.hash('password123', 10),
+      city: 'London',
+      region: 'London',
+      favouriteTeam: 'Arsenal',
+      supporterGroup: 'Gooners',
+      isDriver: false,
+      maxSeats: 0,
+      entryCenter: 'Emirates Stadium',
+      interests: ['Football', 'Travel', 'Music'],
+      profilePicture: '',
+      role: 'user',
+      isBanned: false
+    });
+    await demoUser.save();
+    regularUsers.push(demoUser);
+    
+    // Create other users
     for (let i = 1; i <= 20; i++) {
       const isDriver = Math.random() > 0.4; // 60% are drivers
       const user = new User({
         fullName: `User ${i} Test`,
         email: `user${i}@example.com`,
         phone: generatePhone(),
-        password: await bcrypt.hash('user123', 10),
+        password: await bcrypt.hash('password123', 10),
         city: getRandomItem(cities),
         region: getRandomItem(regions),
         favouriteTeam: getRandomItem(teams),
@@ -294,14 +317,14 @@ const seedDatabase = async (): Promise<void> => {
 
     console.log('\n✅ Database seeded successfully!');
     console.log('\n📋 Seed Summary:');
-    console.log(`   - Admin users: ${adminUsers.length} (password: admin123)`);
-    console.log(`   - Regular users: ${regularUsers.length} (password: user123)`);
+    console.log(`   - Admin users: ${adminUsers.length} (password: password123)`);
+    console.log(`   - Regular users: ${regularUsers.length} (password: password123)`);
     console.log(`   - Matches: ${matches.length}`);
     console.log(`   - Trips: ${trips.length}`);
     console.log(`   - Messages: ${messageCount}`);
     console.log('\n📧 Sample login credentials:');
-    console.log('   Admin: admin1@example.com / admin123');
-    console.log('   User: user1@example.com / user123');
+    console.log('   Admin: admin1@example.com / password123');
+    console.log('   User: john.doe@example.com / password123');
 
   } catch (error) {
     console.error('❌ Error seeding database:', error);

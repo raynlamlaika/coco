@@ -121,8 +121,8 @@ const LoginForm: React.FC = () => {
       {/* Demo credentials */}
       <div className="mt-6 p-4 bg-blue-50 rounded-lg text-sm">
         <p className="font-medium text-blue-800 mb-2">Demo Credentials:</p>
-        <p className="text-blue-700">Admin: admin1@example.com / admin123</p>
-        <p className="text-blue-700">User: user1@example.com / user123</p>
+        <p className="text-blue-700">👨‍💼 Admin: admin1@example.com / password123</p>
+        <p className="text-blue-700">👤 User: john.doe@example.com / password123</p>
       </div>
     </div>
   );

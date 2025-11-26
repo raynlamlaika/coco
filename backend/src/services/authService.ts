@@ -74,8 +74,9 @@ export const register = async (data: RegisterData): Promise<AuthResponse> => {
  * @returns User and token
  */
 export const login = async (credentials: LoginCredentials): Promise<AuthResponse> => {
-  // Find user by email
-  const user = await User.findOne({ email: credentials.email.toLowerCase() });
+  // Find user by email and explicitly select password field
+  const user = await User.findOne({ email: credentials.email.toLowerCase() }).select('+password');
+  
   if (!user) {
     throw new Error('Invalid email or password');
   }
