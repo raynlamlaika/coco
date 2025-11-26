@@ -26,7 +26,7 @@ const UserSchema: Schema = new Schema({
   fullName: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   phone: { type: String, required: true },
-  password: { type: String, required: true },
+  password: { type: String, required: true, select: false }, // select: false excludes by default
   city: { type: String, required: true },
   region: { type: String, required: true },
   favouriteTeam: { type: String, required: true },

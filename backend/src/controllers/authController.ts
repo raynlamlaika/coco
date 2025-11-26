@@ -23,13 +23,30 @@ export const register = asyncHandler(async (req: Request, res: Response): Promis
 export const login = asyncHandler(async (req: Request, res: Response): Promise<void> => {
   const { email, password } = req.body;
   
-  const { user, token } = await authService.login({ email, password });
+  // Validate input
+  if (!email || !password) {
+    res.status(400).json({
+      success: false,
+      message: 'Email and password are required'
+    });
+    return;
+  }
+  
+  try {
+    const { user, token } = await authService.login({ email, password });
 
-  res.status(200).json({
-    success: true,
-    message: 'Login successful',
-    data: { user, token }
-  });
+    res.status(200).json({
+      success: true,
+      message: 'Login successful',
+      data: { user, token }
+    });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Login failed';
+    res.status(401).json({
+      success: false,
+      message
+    });
+  }
 });
 
 /**
